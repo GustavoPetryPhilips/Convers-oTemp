@@ -1,10 +1,14 @@
 name: Build
+
 on:
   push:
     branches:
       - main
+
 jobs:
   DigaOla:
-    runs-on: ubuntu-lateste
+    runs-on: ubuntu-latest
     steps:
-      - run: echo "Ola"
+      - name: Print greeting
+        run: echo "Ola"
+
