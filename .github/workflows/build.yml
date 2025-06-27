@@ -9,8 +9,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Diga Ola
+
+      - name: Diga Olá
         uses: ./.github/Actions/diga-ola-Action
+
   Build:
     runs-on: ubuntu-latest
     steps:
@@ -19,8 +21,19 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
+
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+
       - name: Set Gradle Permission
-        run: chmod +x ./gradlew
-      - run: ./gradlew build
+        uses: ./.github/Actions/permissao-gradlew-Action
+
+      - name: Executa build
+        uses: ./.github/Actions/executa-build-Action
+
+
+
+
+
+
+

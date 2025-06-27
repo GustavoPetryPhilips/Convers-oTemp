@@ -1,0 +1,9 @@
+name: Executa
+description: "Executa o Build"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Executar build
+      run: ./gradlew build
+      shell: bash
