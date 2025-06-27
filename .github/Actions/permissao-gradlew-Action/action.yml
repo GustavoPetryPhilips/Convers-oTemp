@@ -8,5 +8,3 @@ runs:
       run: chmod +x ./gradlew
       shell: bash
 
-    - name: Executar build
-    - run: ./gradlew build
